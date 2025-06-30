@@ -130,8 +130,8 @@ const MatrixRain = () => {
         const draw = () => {
             frameCounter.current++;
             
-            // Randomly trigger a glitch effect
-            if (glitchStartFrame === 0 && Math.random() < 0.002) {
+            // Randomly trigger a glitch effect. Probability is set to average once every ~30 seconds (1/1800 frames @ 60fps)
+            if (glitchStartFrame === 0 && Math.random() < 1/1800) {
                 glitchStartFrame = frameCounter.current;
             }
 
