@@ -231,6 +231,7 @@ const MatrixRain = () => {
                 style={{
                     display: 'none',
                 }}
+                playsInline
             />
             <canvas
                 ref={canvasRef}
